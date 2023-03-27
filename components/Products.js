@@ -85,7 +85,7 @@ const Products = () => {
 
           <Pressable key={index} style={styles.product}>
             <Image source={{ uri: product.image }} style={styles.productImage} />
-            <View>
+            <View style={{ alignItems: 'center' }}>
               <Text style={styles.productName}>{product.name}</Text>
               <Text style={styles.productPrice}>₦{product.price}</Text>
             </View>
