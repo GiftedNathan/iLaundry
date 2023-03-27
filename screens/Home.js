@@ -2,9 +2,10 @@ import React, { useState, useEffect } from 'react'
 import * as Location from 'expo-location';
 import { Entypo } from '@expo/vector-icons';
 import { FontAwesome } from '@expo/vector-icons';
-import { StyleSheet, Text, View, SafeAreaView, Alert, Pressable, Image, TextInput } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Alert, Pressable, Image, TextInput, ScrollView } from 'react-native'
 import Carousel from '../components/Carousel';
 import Services from '../components/Services';
+import Products from '../components/Products';
 
 
 
@@ -92,18 +93,23 @@ const Home = () => {
         </Pressable>
 
       </View>
+      <ScrollView>
 
-      {/* form input  */}
-      <View style={styles.formContainer}>
-        <TextInput editable numberOfLines={3} maxLength={40} style={styles.textInput} />
-        <FontAwesome name="search" size={24} color="#ff6961" style={styles.searchIcon} />
-      </View>
+        {/* form input  */}
+        <View style={styles.formContainer}>
+          <TextInput editable numberOfLines={3} maxLength={40} style={styles.textInput} />
+          <FontAwesome name="search" size={24} color="#ff6961" style={styles.searchIcon} />
+        </View>
 
-      {/* carousel slider  */}
-      <Carousel />
+        {/* carousel slider  */}
+        <Carousel />
 
-      {/* services section  */}
-      <Services />
+        {/* services section  */}
+        <Services />
+
+        {/* products section  */}
+        <Products />
+      </ScrollView>
 
       {console.log('Hello')}
     </SafeAreaView>

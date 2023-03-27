@@ -27,7 +27,7 @@ const Carousel = () => {
         autoplay
         circleLoop
         ImageComponentStyle={{
-          borderRadius: 15, width: '90%', marginTop: 5, margin: 'auto',
+          borderRadius: 15, width: '90%', marginTop: 5, marginLeft: -20,
         }}
         imageLoadingColor="#2196F3"
       />
@@ -40,6 +40,8 @@ export default Carousel
 const styles = StyleSheet.create({
   slideContainer: {
     marginTop: 15,
+    // alignItems: 'center',
+    // height: 250,
   },
   dotStyle: {
     width: 20,
